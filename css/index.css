@@ -213,6 +213,7 @@ header {
 @media (max-width: 500px) {
   header {
     flex-wrap: wrap;
+    padding: 2% 1% 1%;
   }
 }
 header div {
@@ -235,7 +236,7 @@ header div h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5rem;
+    font-size: 3.25rem;
   }
 }
 @media (max-width: 500px) {
@@ -338,9 +339,23 @@ header div h1 {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 4%;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 80%;
+    padding: 6% 0;
+    margin: 0 10%;
+  }
 }
 .home .content-pick .destination .btn {
   display: flex;
