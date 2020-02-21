@@ -2,15 +2,30 @@ header{
   display:flex;
   padding:3%;
   .btm-border();
+  .border-test();
+  @media @phone{
+    flex-wrap:  wrap;
+  }//end of media query
   
   div{
-    display:flex;
-    flex-direction: column wrap;
-    justify-content: space-around;
+    .flex(space-around,center);
     width:46%;
+    .border-test();
+
+    @media @phone{
+      width:100%;
+
+    }//end of media query
 
     h1{
       width:64%;
+      .border-test();
+
+      @media @phone{
+        width:100%;
+        display:flex;
+        justify-content: center;
+      }//end of media query
     }//end of h1
   }//end of divs in header (top part)
 }//end of header section
