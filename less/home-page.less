@@ -2,29 +2,26 @@ header{
   display:flex;
   padding:3%;
   .btm-border();
-  .border-test();
-  @media @phone{
+  @media @mobile{
     flex-wrap:  wrap;
   }//end of media query
   
   div{
     .flex(space-around,center);
     width:46%;
-    .border-test();
 
-    @media @phone{
+    @media @mobile{
       width:100%;
 
     }//end of media query
 
     h1{
       width:64%;
-      .border-test();
 
-      @media @phone{
+      @media @mobile{
         width:100%;
-        display:flex;
-        justify-content: center;
+        .flex(center,center);
+        font-size: 3.5rem;
       }//end of media query
     }//end of h1
   }//end of divs in header (top part)
@@ -34,6 +31,9 @@ header{
 .home {
   .home-section{
 
+    @media @mobile{
+      padding: 0 4%;
+    }//end of mq
     img{
       margin-bottom:3%;
     }//end of img
@@ -50,20 +50,34 @@ header{
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+   @media @mobile{
+      padding: 0 4%;
+      flex-direction: column;
+   }//end of mq
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile{
+        width:100%;
+      }//end of mq
     }//end of text content
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile{
+        width:100%;
+      }//end of mq
       img {
         border-radius: 10px;
-      }//endof img
+
+        @media @mobile{
+          width:100%;
+        }//mq
+      }//end of img
     }//end of img content
   }//end on content-section
 
@@ -71,9 +85,16 @@ header{
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile{
+      flex-direction: column-reverse;
+    }//end of media query
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile{
+        width:100%;
+      }//end of mq
     }//end of text content
 
     .img-content {
@@ -86,8 +107,20 @@ header{
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile{
+      padding: 0 4%;
+    }
+
+    @media @mobile{
+        width:100%;
+      }//mq
+
     img {
       border-radius: 10px;
+
+      @media @mobile{
+        width:100%;
+      }//mq
     }//end of img
   }//end of content destination
 
